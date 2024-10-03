@@ -1,0 +1,149 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montserrad Fallas Ruiz | Portfolio</title>
+    <link rel="stylesheet" href="StyleSheet.css">
+</head>
+
+<body>
+    <div class="full-page" id="home">
+        <h1>Hello, I'm <span style="color: red">Montserrad</span>.</h1>
+        <!--Implement eventually: typewriter typing effect on name-->
+        <h1>I'm a junior CS major @ Kennesaw State University.</h1>
+        <br>
+        <button onclick="document.getElementById('aboutme').scrollIntoView({ behavior: 'smooth' });">Learn More</button>
+    </div>
+
+    <nav class="hidden">
+        <a href="#home">Home</a>
+        <a href="#aboutme">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="Montserrad Fallas Ruiz Resume 2024.pdf" target="_blank">Resume</a>
+    </nav>
+
+    <section id="aboutme">
+        <div class="about-container">
+            <div class="image-container">
+                <div class="slideshow-container">
+                    <img class="slide" src="images/headshot.jpeg" style="display: block;">
+                    <img class="slide" src="images/nationals23.jpg">
+                    <img class="slide" src="images/linkretreat.jpg">
+                    <img class="slide" src="images/shpegbm.JPG">
+                    <img class="slide" src="images/girlswhocode.jpg">
+                    <div class="button-container">
+                        <a href="https://github.com/montsefallas" target="_blank">
+                            <img src="images/github-mark-white.png" class="social-logo">
+                        </a>
+                        <a href="https://www.linkedin.com/in/montserradfallas" target="_blank">
+                            <img src="images/LinkedIn_logo_initials.png" class="social-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-content">
+                <h1 class="big-heading">Montserrad Fallas Ruiz</h1>
+                <h2 class="small-heading">KSU '26, CS Student, Aspiring Software Engineer</h2>
+                <p class="body-text">
+                    I am currently working on my Bachelor of Science in Computer Science, and I am expected to graduate May 2026.
+                    My interests include:<br>   <br>• Software design and development<br>• Data science<br>• Database administration<br>• Mobile app development<br>   <br>
+                    Outside of class I'm involved on campus as the External Vice President of my school's chapter of the Society of Hispanic Professional Engineers (SHPE).
+                    I also spent two years as Project Manager of Logistics and Operations for Kennesaw State University's Marietta Activities Council.
+                    You can read more about my involvements <a href="Montserrad Fallas Ruiz Resume 2024.pdf" target="_blank" style="color: red;">here</a>.
+                    Some of my hobbies include running, thrifting, finding new music, and - of course - <i>creating something from nothing by talking to the computer!</i>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h1>Projects</h1>
+        <p>Section 2</p>
+    </section>
+
+    <section id="contact">
+        <div class="contact-header">
+            <h1 class="big-heading">Contact Me</h1>
+            <h2 class="contact-small-heading">Email: <a href="mailto:montserradfallas@gmail.com">montserradfallas@gmail.com</a> | <a href="mailto:mfallasr@students.kennesaw.edu">mfallasr@students.kennesaw.edu</a></h2>
+            <h2 class="contact-small-heading">Phone: 470.429.1129</h2>
+        </div>
+
+        <form id="contact-form" onsubmit="sendEmail(event)">
+            <div class="form-group">
+                <input type="text" placeholder="Subject*" name="subject" required />
+            </div>
+            <div class="form-group">
+                <textarea placeholder="Your Message*" name="body" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="send-button">Send</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+    function highlightNav() {
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+        const fullPageHeight = document.querySelector('.full-page').offsetHeight;
+        const nav = document.querySelector('nav');
+
+        let index = sections.length;
+
+        if (window.scrollY < fullPageHeight) {
+            nav.classList.add('hidden');
+        } else {
+            nav.classList.remove('hidden');
+        }
+
+        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove('active'));
+        if (window.scrollY >= fullPageHeight - 50) {
+            navLinks[index + 1].classList.add('active');
+        } else {
+            navLinks[0].classList.add('active');
+        }
+    }
+
+    window.addEventListener('scroll', highlightNav);
+    window.addEventListener('load', highlightNav);
+
+    let slideIndex = 0;
+
+    function showSlides(){
+    const slides = document.querySelectorAll('.slide');
+    slides.forEach(slide => slide.style.display = "none");
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000);
+    }
+
+    showSlides();
+
+    function sendEmail(event) {
+        event.preventDefault();
+
+        const subjectField = document.querySelector('input[name="subject"]');
+        const bodyField = document.querySelector('textarea[name="body"]');
+
+        const subject = encodeURIComponent(subjectField.value);
+        const body = encodeURIComponent(bodyField.value);
+
+        const mailtoLink = `mailto:montserradfallas@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+
+        subjectField.value = '';
+        bodyField.value = '';
+    }
+    </script>
+
+</body>
+</html>

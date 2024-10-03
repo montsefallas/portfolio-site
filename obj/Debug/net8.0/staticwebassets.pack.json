@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\Montserrad Fallas Ruiz Resume 2024.pdf",
+      "PackagePath": "staticwebassets\\Montserrad Fallas Ruiz Resume 2024.pdf"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\StyleSheet.css"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\LinkedIn_logo_initials.png",
+      "PackagePath": "staticwebassets\\images\\LinkedIn_logo_initials.png"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\girlswhocode.jpg",
+      "PackagePath": "staticwebassets\\images\\girlswhocode.jpg"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\github-mark-white.png",
+      "PackagePath": "staticwebassets\\images\\github-mark-white.png"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\headshot.jpeg",
+      "PackagePath": "staticwebassets\\images\\headshot.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\linkretreat.jpg",
+      "PackagePath": "staticwebassets\\images\\linkretreat.jpg"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\nationals23.jpg",
+      "PackagePath": "staticwebassets\\images\\nationals23.jpg"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\images\\shpegbm.JPG",
+      "PackagePath": "staticwebassets\\images\\shpegbm.JPG"
+    },
+    {
+      "Id": "C:\\Users\\monts\\source\\repos\\portfolio-site\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.portfolio-site.props",
+      "PackagePath": "build\\portfolio-site.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.portfolio-site.props",
+      "PackagePath": "buildMultiTargeting\\portfolio-site.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.portfolio-site.props",
+      "PackagePath": "buildTransitive\\portfolio-site.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.portfolio-site.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
