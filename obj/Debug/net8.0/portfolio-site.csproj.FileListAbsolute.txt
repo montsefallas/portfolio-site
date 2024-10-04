@@ -24,3 +24,4 @@ C:\Users\monts\source\repos\portfolio-site\obj\Debug\net8.0\refint\portfolio-sit
 C:\Users\monts\source\repos\portfolio-site\obj\Debug\net8.0\portfolio-site.pdb
 C:\Users\monts\source\repos\portfolio-site\obj\Debug\net8.0\portfolio-site.genruntimeconfig.cache
 C:\Users\monts\source\repos\portfolio-site\obj\Debug\net8.0\ref\portfolio-site.dll
+C:\Users\monts\source\repos\portfolio-site\obj\Debug\net8.0\portfolio-site.sourcelink.json
