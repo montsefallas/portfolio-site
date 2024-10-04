@@ -85,64 +85,64 @@
     </section>
 
     <script>
-    function highlightNav() {
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-        const fullPageHeight = document.querySelector('.full-page').offsetHeight;
-        const nav = document.querySelector('nav');
+        function highlightNav() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            const fullPageHeight = document.querySelector('.full-page').offsetHeight;
+            const nav = document.querySelector('nav');
 
-        let index = sections.length;
+            let index = sections.length;
 
-        if (window.scrollY < fullPageHeight) {
-            nav.classList.add('hidden');
-        } else {
-            nav.classList.remove('hidden');
+            if (window.scrollY < fullPageHeight) {
+                nav.classList.add('hidden');
+            } else {
+                nav.classList.remove('hidden');
+            }
+
+            while (--index && window.scrollY + 50 < sections[index].offsetTop) { }
+
+            navLinks.forEach((link) => link.classList.remove('active'));
+            if (window.scrollY >= fullPageHeight - 50) {
+                navLinks[index + 1].classList.add('active');
+            } else {
+                navLinks[0].classList.add('active');
+            }
         }
 
-        while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
+        window.addEventListener('scroll', highlightNav);
+        window.addEventListener('load', highlightNav);
 
-        navLinks.forEach((link) => link.classList.remove('active'));
-        if (window.scrollY >= fullPageHeight - 50) {
-            navLinks[index + 1].classList.add('active');
-        } else {
-            navLinks[0].classList.add('active');
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.style.display = "none");
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000);
         }
-    }
 
-    window.addEventListener('scroll', highlightNav);
-    window.addEventListener('load', highlightNav);
+        showSlides();
 
-    let slideIndex = 0;
+        function sendEmail(event) {
+            event.preventDefault();
 
-    function showSlides(){
-    const slides = document.querySelectorAll('.slide');
-    slides.forEach(slide => slide.style.display = "none");
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
+            const subjectField = document.querySelector('input[name="subject"]');
+            const bodyField = document.querySelector('textarea[name="body"]');
 
-    slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 2000);
-    }
+            const subject = encodeURIComponent(subjectField.value);
+            const body = encodeURIComponent(bodyField.value);
 
-    showSlides();
+            const mailtoLink = `mailto: montserradfallas@gmail.com?subject = ${subject}& body=${body}`;
+            window.location.href = mailtoLink;
 
-    function sendEmail(event) {
-        event.preventDefault();
-
-        const subjectField = document.querySelector('input[name="subject"]');
-        const bodyField = document.querySelector('textarea[name="body"]');
-
-        const subject = encodeURIComponent(subjectField.value);
-        const body = encodeURIComponent(bodyField.value);
-
-        const mailtoLink = `mailto:montserradfallas@gmail.com?subject=${subject}&body=${body}`;
-        window.location.href = mailtoLink;
-
-        subjectField.value = '';
-        bodyField.value = '';
-    }
+            subjectField.value = '';
+            bodyField.value = '';
+        }
     </script>
 
 </body>
