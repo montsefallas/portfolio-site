@@ -231,3 +231,54 @@ section {
     cursor: pointer;
     margin-left: 20px;
 }
+
+/*Adjustement for Mobile Devices*/
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .big-heading {
+        font-size: 28px;
+    }
+
+    .small-heading {
+        font-size: 22px;
+    }
+
+    .body-text {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    #contact-form {
+        width: 90%;
+        padding: 0;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .send-button {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    section {
+        height: auto;
+        padding: 10px;
+    }
+}
