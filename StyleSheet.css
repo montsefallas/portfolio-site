@@ -247,8 +247,9 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 15px 0;
+        margin: 15px auto; /*auto was 0 before*/
         border-radius: 50%;
+        overflow: hidden; /*deleted before*/
         width: 200px;
         height: 200px;
         position: relative;
@@ -258,6 +259,7 @@ section {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 50%; /*added this line*/
     }
 
     .image-container{
