@@ -173,10 +173,10 @@ section {
     transition: color 0.3s, text-decoration 0.3s;
 }
 
-    .contact-header a:hover {
-        color: red;
-        text-decoration: underline;
-    }
+.contact-header a:hover {
+    color: red;
+    text-decoration: underline;
+}
 
 #contact-form {
     display: flex;
